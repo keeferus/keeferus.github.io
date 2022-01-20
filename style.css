@@ -3,13 +3,14 @@
     height: auto;
     background-color: aqua;
     Display: flex;
-    justify-content: center;
+    
 }
 
 .name{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
     flex: 1 2 300px;
+    justify-content: center;
     
 }
 
@@ -17,4 +18,5 @@
 .intro{
     font-size: 1.5rem;
     flex: 2 1 300px;
+    justify-content: center;
 }
