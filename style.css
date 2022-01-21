@@ -1,22 +1,43 @@
+/* Color Scheme
+FFD8BE Unbleached Silk
+FFEEDD Antique White
+F8F7FF Ghost White
+B8B8FF Maximum Blue Purple
+9381FF Medium Purple
+*/
+
+body{
+    margin: auto;
+    background-color: #B8B8FF;
+
+}
+
 .container{
-    width:300px;
+    width:100%;
+    margin: auto;
     height: auto;
-    background-color: aqua;
+    background-color: #9381FF;
     Display: flex;
+    flex-direction:column;
+    text-align: center;
+     
     
 }
 
 .name{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
-    flex: 1 2 300px;
+    width: 100%;
+    flex: 1 2;
     justify-content: center;
+    
     
 }
 
 
 .intro{
     font-size: 1.5rem;
-    flex: 2 1 300px;
-    justify-content: center;
+    flex: 2 1;
+    width: 50%;
+    
 }
