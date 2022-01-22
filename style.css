@@ -120,6 +120,7 @@ section{
     border-radius: 12px;
     color: #F8F7FF; 
     z-index: 9;
+    opacity: 0.9;
     
 }
 
@@ -136,12 +137,13 @@ section{
     font-size: 2rem;
     color:black;
     font-weight: 700;
+    
 }
 .left p{
-    margin-top: 10px;
-    font-weight: 300;
-    line-height: 15px;
-    font-size: 1.5rem;
+    margin: 10px 20px 40px 20px;
+    line-height: 25px;
+    font-size: 2rem;
+    color: black;
     
 }
 .left a{
