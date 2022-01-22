@@ -46,7 +46,7 @@ body{
     font-size: 1.5rem;
     letter-spacing: 1.2px;
     line-height: 1px;
-    flex: 1 2;
+    
     
       
 }
@@ -57,8 +57,6 @@ body{
     margin: auto;
     height: auto;
     background-color: #9381FF;
-    Display: flex;
-    flex-direction:column;
     text-align: center;
     
 
@@ -79,27 +77,55 @@ body{
 }
 .body_container{
         width: 100%;
-        margin: auto;
-        Display: flex;
         flex-direction:row;
         flex-wrap: wrap;
         text-align: center;
 }
-.photo_cover{
-    background-image: url("./media/photo_cover.png");
-    background-size: cover;
-    flex-shrink: 4;
-    
-}
 
-.about_text h3{
+@media screen and (min-width: 768px){
+
+.photo_cover{
+    background-image: url("./media/photo_cover_med.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 640px;
+    flex-wrap: wrap;
+    
+    
+}}
+@media screen and (min-width: 1200px){
+
+    .photo_cover{
+        background-image: url("./media/photo_cover.png");
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        min-height: 640px;
+        flex-wrap: wrap;
+        
+        
+    }
+}
+@media only screen and (max-width: 480px) {
+    .photo_cover {
+      background-color: #000000;
+      width: 100%;
+      
+    
+    }
+}
+.about_text h3, p{
     color: #FFEEDD;
+    
     
 }
 
 .flex_container{
-    background-color: rgba(248, 247, 255, 0.5);
-    width: 33%;
+    background-color: rgba(20, 20, 20, 0.5);
+    width: 30%;
+    padding: 10%;
+    
    
 }
 .footer{
