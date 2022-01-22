@@ -46,8 +46,6 @@ body{
     font-size: 1.5rem;
     letter-spacing: 1.2px;
     line-height: 1px;
-    
-    
       
 }
 
@@ -58,7 +56,6 @@ body{
     height: auto;
     background-color: #9381FF;
     text-align: center;
-    
 
 }
 
@@ -75,6 +72,7 @@ body{
     color: #FFEEDD;
     text-shadow: 1px 2px black;
 }
+
 .body_container{
         width: 100%;
         flex-direction:row;
@@ -93,7 +91,8 @@ body{
     flex-wrap: wrap;
     
     
-}}
+    }   
+}
 @media screen and (min-width: 1200px){
 
     .photo_cover{
@@ -126,7 +125,6 @@ body{
     width: 30%;
     padding: 10%;
     
-   
 }
 .footer{
     margin-top: 30px;
