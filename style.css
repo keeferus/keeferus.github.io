@@ -16,16 +16,6 @@ B8B8FF Maximum Blue Purple
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    margin: auto;
-    background-color: #B8B8FF;
-    font-size: 16px;
-html{
-    font-family: 'Dongle';
-    margin: auto;
-    background-color: #B8B8FF;
-    font-size: 16px;
-}
 */
 html{
     font-family: 'Dongle';
@@ -125,7 +115,7 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 20px;
     border-radius: 12px;
     color: #F8F7FF; 
     z-index: 9;
@@ -157,7 +147,12 @@ section{
     padding: 20px 30px;
     letter-spacing: 2px;
     display:inline-block;
+    border-radius: 12px;
 
+}
+
+.left a:hover{
+    background-color: #F8F7FF;
 }
 
 @media only screen and (max-width: 768px){
@@ -173,7 +168,7 @@ section{
     .right{
         width: 100%;
         margin: 0;
-        margin-top: -30px;
+        margin-top: -150px;
     }
 }
 .footer{
