@@ -128,6 +128,7 @@ section{
     height: 600px;
     background:url(media/photo_cover.png) no-repeat center / contain;
     margin-left: -200px;
+
     
      
 }
@@ -170,18 +171,18 @@ section{
 
 @media only screen and (max-width: 768px){
     .container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .left{
         width: 80%;
-        margin-top: 10px;
+        margin-top: -150px;
         
 
     }
     .right{
         width: 100%;
         margin: 0;
-        margin-top: -150px;
+        margin-top: -75px;
     }
 }
 .footer{
