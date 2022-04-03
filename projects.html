@@ -50,8 +50,8 @@
         
         var obj = {};
         obj["clientId"] = "f276241840dcc148b417662f85bb5ad3";
-        obj["clientSecret"] = "b48fa3644952c1e9aeefb3baa93cacf1593a2c6fa96f76ed55bec083098bcf67";
-        obj["script"] = "\r\nimport java.util.Scanner;\r\n\r\n\tpublic class gradeScale {\r\n\r\n\t\tpublic static void main(String[] args) {\r\n\r\n\t\t\tScanner scan = new Scanner(System.in);\r\n\t\t\tSystem.out.println(\"Enter a grade:\");\r\n\r\n\t\t\tint n = scan.nextInt();\r\n\r\n\t\t\tif (n >= 90 && n <= 100) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made an A\");\r\n\r\n\t\t\t} else if (n >= 80 && n < 90) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a B\");\r\n\r\n\t\t\t} else if (n >= 70 && n < 80) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a C\");\r\n\r\n\t\t\t} else if (n >= 65 && n < 70) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a D\");\r\n\r\n\t\t\t} else if (n >= 0 && n < 65) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made an F\");\r\n\r\n\t\t\t} else {\r\n\r\n\t\t\t\tSystem.out.println(\"The number you entered is not in the range\");\r\n\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t}\r\n\r\n";
+        obj["clientSecret"] = "8ad164c6ce9948c2645e6a83f94679d0092371c188156bfcb6f37e2884b9aa2b";
+        obj["script"] = "import java.util.Scanner;\r\n\r\npublic class gradeScale {\r\n\tpublic static void main(String[] args) {\r\n\t\t@SuppressWarnings(\"resource\")\r\n\t\tScanner scan = new Scanner(System.in);\r\n\t\tSystem.out.println(\"Enter a grade:\");\r\n\t\tint n = scan.nextInt();\r\n\t\tif (n >= 90 && n <= 100) {\r\n\t\t\tSystem.out.println(\"You made an A\");\r\n\t\t} else if (n >= 80 && n < 90) {\r\n\t\t\tSystem.out.println(\"You made a B\");\r\n\t\t} else if (n >= 70 && n < 80) {\r\n\t\t\tSystem.out.println(\"You made a C\");\r\n\t\t} else if (n >= 65 && n < 70) {\r\n\t\t\tSystem.out.println(\"You made a D\");\r\n\t\t} else if (n >= 0 && n < 65) {\r\n\t\t\tSystem.out.println(\"You made an F\");\r\n\t\t} else {\r\n\t\t\tSystem.out.println(\"The number you entered is not in the range\");\r\n\t\t}\r\n\t}\r\n}\r\n";
         obj["language"] = "java";
         obj["versionIndex"] = "0";
         obj["stdin"] = stdin.value;
