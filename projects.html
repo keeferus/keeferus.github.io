@@ -21,7 +21,91 @@
       <a href="contact.html">Contact</a>
     </nav></div>
     <section>
+      <p>
+        Convert your number grade to a letter grade
+      </p>
       
+      <input type="text" id="stdin"/>
+      <p id="credits"></p>
+      <form id="form">
+        <button id="run">Run</button>
+      </form>
+      <code id="output"></code>
+      
+      <script>
+      var run = document.getElementById("run");
+      
+      run.addEventListener("click", function (e) {
+        
+        e.preventDefault();
+        
+        var stdin = document.getElementById("stdin");
+        var form = document.getElementById("form");
+        var credits = document.getElementById("credits");
+        var output = document.getElementById("output");
+        
+        output.innerHTML = "Loading...";
+        
+        console.log(stdin.value);
+        
+        var obj = {};
+        obj["clientId"] = "f276241840dcc148b417662f85bb5ad3";
+        obj["clientSecret"] = "b48fa3644952c1e9aeefb3baa93cacf1593a2c6fa96f76ed55bec083098bcf67";
+        obj["script"] = "\r\nimport java.util.Scanner;\r\n\r\n\tpublic class gradeScale {\r\n\r\n\t\tpublic static void main(String[] args) {\r\n\r\n\t\t\tScanner scan = new Scanner(System.in);\r\n\t\t\tSystem.out.println(\"Enter a grade:\");\r\n\r\n\t\t\tint n = scan.nextInt();\r\n\r\n\t\t\tif (n >= 90 && n <= 100) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made an A\");\r\n\r\n\t\t\t} else if (n >= 80 && n < 90) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a B\");\r\n\r\n\t\t\t} else if (n >= 70 && n < 80) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a C\");\r\n\r\n\t\t\t} else if (n >= 65 && n < 70) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made a D\");\r\n\r\n\t\t\t} else if (n >= 0 && n < 65) {\r\n\r\n\t\t\t\tSystem.out.println(\"You made an F\");\r\n\r\n\t\t\t} else {\r\n\r\n\t\t\t\tSystem.out.println(\"The number you entered is not in the range\");\r\n\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t}\r\n\r\n";
+        obj["language"] = "java";
+        obj["versionIndex"] = "0";
+        obj["stdin"] = stdin.value;
+        var jsonStr = JSON.stringify(obj);
+        
+        console.log(jsonStr);
+        
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const url = "https://api.jdoodle.com/v1/execute";
+        fetch(proxyurl + url, {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: jsonStr
+        })
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          console.log(data);
+          var outputStr = data.output;
+          console.log(outputStr);
+          var formattedOutput = outputStr.replace(/(?:\r\n|\r|\n)/g, '<br>');
+          output.innerHTML = formattedOutput;
+        })
+        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+        
+        const creditsUrl = "https://api.jdoodle.com/v1/credit-spent";
+        fetch(proxyurl + creditsUrl, {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: jsonStr
+        })
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          console.log(data);
+          var creditsLeft = 200 - data.used;
+          console.log(credits);
+          credits.innerHTML = "Runs left: " + creditsLeft;
+        })
+        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+        
+        
+        
+        
+      });
+      </script>
   </section>
 <footer class="footer"></footer>
 
